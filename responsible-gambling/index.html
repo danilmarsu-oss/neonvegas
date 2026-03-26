@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="fi-FI">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vastuullinen pelaaminen – Neonvegas</title>
+  <meta name="description" content="Tutustu Neonvegas vastuullisen pelaamisen periaatteisiin. Me tarjoamme työkaluja ja tukea turvalliseen ja hallittuun pelaamiseen." />
+  <link rel="canonical" href="/responsible-gambling/" />
+  <link rel="icon" type="image/png" href="../neonvegas images/favicon-96x96.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&amp;family=Exo+2:wght@400;600;700;800&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-main: #15062e;
+      --bg-surface: #1e0a3f;
+      --bg-header-footer: #230a4d;
+      --accent: #f452eb;
+      --text-main: #f8f2ff;
+      --text-soft: #d9c6ef;
+      --line: #3b2066;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Exo 2", sans-serif;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(244, 82, 235, 0.18), transparent 28%),
+        radial-gradient(circle at 85% 100%, rgba(94, 24, 194, 0.3), transparent 30%),
+        var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1160px, 92vw); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--bg-header-footer);
+      border-bottom: 1px solid rgba(244, 82, 235, 0.3);
+    }
+    .header-wrap {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
+    .logo img { width: 170px; height: auto; display: block; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-family: "Chakra Petch", sans-serif;
+      font-weight: 600;
+    }
+    .nav-links a { color: var(--text-soft); }
+    .nav-links a:hover { color: #fff; }
+    .auth-buttons { display: flex; align-items: center; gap: 10px; }
+    .btn {
+      border: none;
+      cursor: pointer;
+      border-radius: 12px;
+      font-family: "Chakra Petch", sans-serif;
+      font-weight: 700;
+      padding: 10px 16px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); opacity: 0.94; }
+    .btn-login { background: #230a4d; color: #fff; border: 1px solid #fff; }
+    .btn-signup { background: #f452eb; color: #230a4d; }
+    main { padding: 34px 0 0; }
+    .content {
+      background: rgba(28, 10, 58, 0.88);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    .content h1,
+    .content h2,
+    .content h3 {
+      font-family: "Chakra Petch", sans-serif;
+      color: #fff;
+      line-height: 1.25;
+    }
+    .content p,
+    .content li,
+    .content td,
+    .content th { color: var(--text-soft); }
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 20px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .content th,
+    .content td {
+      border: 1px solid var(--line);
+      padding: 10px;
+      text-align: left;
+    }
+    .content th { background: #2d135c; color: #fff; }
+    .content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid rgba(244, 82, 235, 0.3);
+    }
+    footer {
+      background: #230a4d;
+      margin-top: 16px;
+      border-top: 1px solid rgba(244, 82, 235, 0.3);
+      padding: 30px 0;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      margin: 0 0 16px;
+      color: #e8d8f9;
+      font-family: "Chakra Petch", sans-serif;
+    }
+    .footer-links a:hover { color: #fff; }
+    .copyright { color: #d9c6ef; font-size: 0.95rem; }
+    @media (max-width: 720px) {
+      .header-wrap { justify-content: center; }
+      .nav-links,
+      .auth-buttons { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-wrap">
+      <a href="../" class="logo" aria-label="Neonvegas Casino etusivu">
+        <img src="../neonvegas images/neonvegas-logo.svg" alt="Neonvegas logo" />
+      </a>
+      <nav class="nav-links" aria-label="Päänavigaatio">
+        <a href="../bonus/">Bonukset</a>
+        <a href="../vip/">VIP-klubi</a>
+      </nav>
+      <div class="auth-buttons">
+        <a class="btn btn-login" href="../login/">Kirjaudu</a>
+        <a class="btn btn-signup" href="/go/">Rekisteröidy</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <article class="content" aria-label="Sivun sisältö">
+<h1>Vastuullinen pelaaminen – Neonvegas</h1>
+<p>Me pidämme vastuullista pelaamista keskeisenä osana neonvegas-alustan toimintaa. Neonvegas casino tarjoaa viihdettä, mutta samalla varmistamme, että voimme pelata turvallisesti ja hallitusti. Vastuullinen pelaaminen tarkoittaa, että ymmärrämme pelaamiseen liittyvät riskit ja pidämme pelaamisen tasapainossa muun elämän kanssa. Me haluamme tarjota työkalut ja tuen, joiden avulla voimme hallita omaa pelaamistamme tehokkaasti.</p>
+
+<p>Me uskomme, että pelaamisen tulee olla hauskaa ja hallittua. Neonvegas tekee aktiivisesti töitä varmistaakseen, että kaikki pelaajat voivat nauttia palvelusta turvallisesti ilman haitallisia vaikutuksia.</p>
+
+<h2>Mitä vastuullinen pelaaminen tarkoittaa</h2>
+<p>Me ymmärrämme vastuullisen pelaamisen tarkoittavan sitä, että asetamme rajat ja pidämme pelaamisen hallinnassa. Neonvegas casino kannustaa pelaajia seuraamaan omaa pelaamistaan ja tunnistamaan mahdolliset riskit ajoissa.</p>
+
+<p>Vastuullinen pelaaminen sisältää muun muassa ajan ja rahan hallinnan, omien rajojen tunnistamisen sekä tarvittaessa taukojen pitämisen. Me voimme käyttää palvelua viihteenä ilman, että se vaikuttaa negatiivisesti arkeemme.</p>
+
+<h2>Työkalut pelaamisen hallintaan</h2>
+<p>Me tarjoamme neonvegas-alustalla useita työkaluja, joiden avulla voimme hallita omaa pelaamistamme. Nämä työkalut on suunniteltu auttamaan meitä pysymään omissa rajoissamme ja ehkäisemään liiallista pelaamista.</p>
+
+<ul>
+  <li>Talletusrajat</li>
+  <li>Panosrajat</li>
+  <li>Aikarajat</li>
+  <li>Pelihistorian seuranta</li>
+</ul>
+
+<p>Neonvegas casino antaa meille mahdollisuuden asettaa nämä rajat helposti tilimme asetuksista. Näin voimme varmistaa, että pelaaminen pysyy hallinnassa.</p>
+
+<h2>Itsearviointi</h2>
+<p>Me voimme arvioida omaa pelaamistamme säännöllisesti. Neonvegas tarjoaa mahdollisuuden tarkastella omaa pelikäyttäytymistä ja tunnistaa mahdolliset muutokset.</p>
+
+<p>Itsearviointi auttaa meitä ymmärtämään, onko pelaaminen pysynyt viihteellisenä vai onko siihen liittynyt riskejä. Neonvegas casino kannustaa pelaajia tarkkailemaan omaa toimintaansa ja tekemään tarvittavia muutoksia ajoissa.</p>
+
+<h2>Pelaamisen hallinnan merkit</h2>
+<p>Me voimme tunnistaa vastuullisen pelaamisen merkit seuraavista asioista:</p>
+
+<ul>
+  <li>Pelaaminen pysyy budjetin rajoissa</li>
+  <li>Pelaaminen ei vaikuta arkeen tai ihmissuhteisiin</li>
+  <li>Pelaaminen on viihdettä, ei tulonlähde</li>
+  <li>Pystymme lopettamaan pelaamisen halutessamme</li>
+</ul>
+
+<p>Neonvegas casino auttaa meitä ylläpitämään näitä periaatteita tarjoamalla selkeitä työkaluja ja ohjeita.</p>
+
+<h2>Riskien tunnistaminen</h2>
+<p>Me voimme tunnistaa ongelmallisen pelaamisen varoitusmerkkejä ajoissa. Näitä voivat olla esimerkiksi liiallinen ajan tai rahan käyttö, vaikeus lopettaa pelaaminen tai pelaaminen stressin lievittämiseksi.</p>
+
+<p>Neonvegas kannustaa meitä ottamaan nämä merkit vakavasti ja hakemaan apua tarvittaessa. Varhainen tunnistaminen auttaa estämään tilanteen pahenemisen.</p>
+
+<h2>Itsensä poissulkeminen</h2>
+<p>Me voimme tarvittaessa sulkea tilimme määräajaksi tai pysyvästi. Neonvegas casino tarjoaa mahdollisuuden itsepoissulkemiseen, joka estää pääsyn palveluun valituksi ajaksi.</p>
+
+<p>Itsepoissulkeminen on tehokas tapa hallita pelaamista ja antaa aikaa palautumiseen. Neonvegas tekee prosessista yksinkertaisen ja helposti saavutettavan.</p>
+
+<h2>Tauot ja rajoitukset</h2>
+<p>Me voimme pitää taukoja pelaamisesta milloin tahansa. Neonvegas tarjoaa mahdollisuuden asettaa tilapäisiä rajoituksia, jotka auttavat meitä ottamaan etäisyyttä pelaamiseen.</p>
+
+<p>Tauot ovat tärkeä osa vastuullista pelaamista, ja neonvegas casino kannustaa niiden käyttöön tarvittaessa.</p>
+
+<h2>Alaikäisten suoja</h2>
+<p>Me varmistamme, että palvelu on tarkoitettu vain täysi-ikäisille. Neonvegas ei salli alaikäisten pelaamista ja käyttää tunnistautumismenetelmiä varmistaakseen käyttäjien iän.</p>
+
+<p>Neonvegas casino kannustaa myös vanhempia käyttämään suodatusohjelmia ja muita keinoja estääkseen alaikäisten pääsyn pelisivustoille.</p>
+
+<h2>Ulkopuolinen tuki</h2>
+<p>Me voimme hakea apua myös ulkopuolisilta tahoilta, jos pelaaminen aiheuttaa ongelmia. Neonvegas suosittelee useita organisaatioita, jotka tarjoavat tukea ja neuvontaa.</p>
+
+<ul>
+  <li>Peluuri</li>
+  <li>Gamblers Anonymous</li>
+  <li>BeGambleAware</li>
+</ul>
+
+<p>Neonvegas casino kannustaa ottamaan yhteyttä näihin palveluihin, jos tarvitsemme lisätukea.</p>
+
+<h2>Meidän sitoumuksemme</h2>
+<p>Me sitoudumme tarjoamaan turvallisen ja vastuullisen peliympäristön. Neonvegas kehittää jatkuvasti työkaluja ja käytäntöjä, jotka tukevat pelaajien hyvinvointia.</p>
+
+<p>Neonvegas casino tekee yhteistyötä alan asiantuntijoiden kanssa varmistaakseen, että palvelu täyttää korkeimmat vastuullisuusstandardit.</p>
+
+<h2>Vinkkejä vastuulliseen pelaamiseen</h2>
+<p>Me voimme parantaa omaa pelaamistamme noudattamalla muutamia yksinkertaisia periaatteita:</p>
+
+<ul>
+  <li>Aseta budjetti ennen pelaamista</li>
+  <li>Pelaa vain vapaa-ajalla</li>
+  <li>Pidä taukoja säännöllisesti</li>
+  <li>Älä yritä voittaa tappioita takaisin</li>
+</ul>
+
+<p>Neonvegas casino tukee näitä periaatteita tarjoamalla työkaluja ja ohjeita, jotka auttavat meitä pysymään hallinnassa.</p>
+
+<h2>Yhteydenotto vastuulliseen pelaamiseen liittyen</h2>
+<p>Me voimme ottaa yhteyttä asiakastukeen kaikissa vastuulliseen pelaamiseen liittyvissä kysymyksissä. Neonvegas tarjoaa apua ja lisätietoa tarvittaessa.</p>
+
+<p>Neonvegas casino varmistaa, että kaikki kysymykset käsitellään luottamuksellisesti ja ammattimaisesti.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav class="footer-links" aria-label="Alatunnisteen linkit">
+        <a href="../about-us/">Tietoa meistä</a>
+        <a href="../contact-us/">Ota yhteyttä</a>
+        <a href="../bonus-policy/">Bonuskäytäntö</a>
+        <a href="../privacy-policy/">Tietosuojakäytäntö</a>
+        <a href="../terms-and-conditions/">Käyttöehdot</a>
+        <a href="../responsible-gambling/">Vastuullinen pelaaminen</a>
+      </nav>
+      <div class="copyright">2026 Neonvegas Casino. Kaikki oikeudet pidätetään.</div>
+    </div>
+  </footer>
+</body>
+</html>

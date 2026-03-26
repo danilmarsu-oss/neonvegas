@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="fi-FI">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neonvegas kirjautuminen – Nopea ja turvallinen pääsy tilille</title>
+  <meta name="description" content="Kirjaudu Neonvegas-tilillesi nopeasti ja turvallisesti. Me tarjoamme sujuvan kirjautumisen, nopeat maksut ja helpon pääsyn peleihin kaikilla laitteilla." />
+  <link rel="canonical" href="/login/" />
+  <link rel="icon" type="image/png" href="../neonvegas images/favicon-96x96.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&amp;family=Exo+2:wght@400;600;700;800&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-main: #15062e;
+      --bg-surface: #1e0a3f;
+      --bg-header-footer: #230a4d;
+      --accent: #f452eb;
+      --text-main: #f8f2ff;
+      --text-soft: #d9c6ef;
+      --line: #3b2066;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Exo 2", sans-serif;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(244, 82, 235, 0.18), transparent 28%),
+        radial-gradient(circle at 85% 100%, rgba(94, 24, 194, 0.3), transparent 30%),
+        var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1160px, 92vw); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--bg-header-footer);
+      border-bottom: 1px solid rgba(244, 82, 235, 0.3);
+    }
+    .header-wrap {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
+    .logo img { width: 170px; height: auto; display: block; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-family: "Chakra Petch", sans-serif;
+      font-weight: 600;
+    }
+    .nav-links a { color: var(--text-soft); }
+    .nav-links a:hover { color: #fff; }
+    .auth-buttons { display: flex; align-items: center; gap: 10px; }
+    .btn {
+      border: none;
+      cursor: pointer;
+      border-radius: 12px;
+      font-family: "Chakra Petch", sans-serif;
+      font-weight: 700;
+      padding: 10px 16px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); opacity: 0.94; }
+    .btn-login { background: #230a4d; color: #fff; border: 1px solid #fff; }
+    .btn-signup { background: #f452eb; color: #230a4d; }
+    main { padding: 34px 0 0; }
+    .content {
+      background: rgba(28, 10, 58, 0.88);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    .content h1,
+    .content h2,
+    .content h3 {
+      font-family: "Chakra Petch", sans-serif;
+      color: #fff;
+      line-height: 1.25;
+    }
+    .content p,
+    .content li,
+    .content td,
+    .content th { color: var(--text-soft); }
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 20px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .content th,
+    .content td {
+      border: 1px solid var(--line);
+      padding: 10px;
+      text-align: left;
+    }
+    .content th { background: #2d135c; color: #fff; }
+    .content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid rgba(244, 82, 235, 0.3);
+    }
+    .form-card {
+      margin: 20px 0 24px;
+      padding: 18px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #210c46;
+    }
+    .site-form {
+      display: grid;
+      gap: 12px;
+    }
+    .form-field {
+      display: grid;
+      gap: 6px;
+      color: var(--text-soft);
+      font-weight: 600;
+    }
+    .form-field input {
+      width: 100%;
+      border: 1px solid #5a2f90;
+      background: #14072b;
+      color: #fff;
+      border-radius: 10px;
+      padding: 11px 12px;
+      outline: none;
+    }
+    .form-field input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(244, 82, 235, 0.2);
+    }
+    .form-check {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-soft);
+    }
+    .submit-btn {
+      border: none;
+      border-radius: 12px;
+      background: #f452eb;
+      color: #230a4d;
+      font-family: "Chakra Petch", sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 12px 16px;
+      cursor: pointer;
+      width: fit-content;
+    }
+    footer {
+      background: #230a4d;
+      margin-top: 16px;
+      border-top: 1px solid rgba(244, 82, 235, 0.3);
+      padding: 30px 0;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      margin: 0 0 16px;
+      color: #e8d8f9;
+      font-family: "Chakra Petch", sans-serif;
+    }
+    .footer-links a:hover { color: #fff; }
+    .copyright { color: #d9c6ef; font-size: 0.95rem; }
+    @media (max-width: 720px) {
+      .header-wrap { justify-content: center; }
+      .nav-links,
+      .auth-buttons { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-wrap">
+      <a href="../" class="logo" aria-label="Neonvegas Casino etusivu">
+        <img src="../neonvegas images/neonvegas-logo.svg" alt="Neonvegas logo" />
+      </a>
+      <nav class="nav-links" aria-label="Päänavigaatio">
+        <a href="../bonus/">Bonukset</a>
+        <a href="../vip/">VIP-klubi</a>
+      </nav>
+      <div class="auth-buttons">
+        <a class="btn btn-login" href="../login/">Kirjaudu</a>
+        <a class="btn btn-signup" href="/go/">Rekisteröidy</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <article class="content" aria-label="Sivun sisältö">
+<h1>Neonvegas kirjautuminen – helppo pääsy pelaamiseen</h1>
+<p>Me tarjoamme sujuvan ja turvallisen kirjautumiskokemuksen neonvegas-alustalla, jotta voimme siirtyä nopeasti suoraan pelaamisen pariin. Kirjautuminen on suunniteltu yksinkertaiseksi ja nopeaksi, eikä vaadi monimutkaisia vaiheita. Me voimme käyttää palvelua niin tietokoneella kuin mobiililaitteella ilman erillisiä sovelluksia, mikä tekee sisäänkirjautumisesta vaivatonta missä tahansa. Neonvegas casino hyödyntää modernia teknologiaa, jonka ansiosta tunnistautuminen tapahtuu turvallisesti ja tehokkaasti. Näin voimme keskittyä olennaiseen eli peleihin ja viihteeseen ilman turhia viiveitä.</p>
+
+<h2>Miten kirjautuminen toimii</h2>
+<p>Me teemme kirjautumisesta neonvegas casino -sivustolle nopeaa ja intuitiivista. Prosessi perustuu usein Pay’n Play -järjestelmään, jonka ansiosta voimme kirjautua sisään verkkopankkitunnuksilla ilman erillistä käyttäjätunnusta tai salasanaa. Tämä tarkoittaa, että jokainen kirjautuminen on samalla turvallinen tunnistautuminen. Meidän ei tarvitse muistaa salasanoja tai täyttää pitkiä lomakkeita, vaan voimme aloittaa pelaamisen muutamassa sekunnissa. Tämä tekee palvelusta erityisen kätevän sekä uusille että kokeneille pelaajille.</p>
+
+<section class="form-card" aria-label="Kirjautumislomake">
+  <h2>Kirjaudu tilillesi</h2>
+  <form class="site-form" action="#" method="post">
+    <label class="form-field" for="login-email">
+      Sähköposti
+      <input id="login-email" name="email" type="email" autocomplete="email" required />
+    </label>
+    <label class="form-field" for="login-password">
+      Salasana
+      <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+    </label>
+    <label class="form-check" for="remember-me">
+      <input id="remember-me" name="remember" type="checkbox" />
+      Muista minut
+    </label>
+    <button class="submit-btn" type="submit">Kirjaudu sisään</button>
+  </form>
+</section>
+
+<h2>Kirjautumisvaiheet askel askeleelta</h2>
+<p>Me voimme kirjautua sisään helposti seuraamalla muutamaa yksinkertaista vaihetta. Prosessi on suunniteltu niin, että se vie vain hetken ja toimii sujuvasti kaikilla laitteilla.</p>
+<ul>
+  <li>Siirry Neonvegas-sivustolle</li>
+  <li>Valitse “Kirjaudu” tai “Pelaa nyt”</li>
+  <li>Valitse oma pankkisi listalta</li>
+  <li>Tunnistaudu verkkopankkitunnuksilla</li>
+  <li>Vahvista kirjautuminen</li>
+  <li>Aloita pelaaminen välittömästi</li>
+</ul>
+
+<h2>Turvallinen kirjautuminen ja tietosuoja</h2>
+<p>Me pidämme turvallisuutta ensisijaisena, ja siksi neonvegas käyttää edistynyttä salausteknologiaa kaikkien kirjautumisten suojaamiseen. Kaikki tiedot siirtyvät suojattujen yhteyksien kautta, mikä estää ulkopuolisten pääsyn tietoihimme. Lisäksi tunnistautuminen pankkitunnuksilla varmistaa, että vain oikea käyttäjä pääsee tilille. Neon vegas casino toimii lisensoidusti, mikä tarkoittaa, että se noudattaa tiukkoja turvallisuusstandardeja ja sääntöjä. Näin voimme olla varmoja siitä, että tietomme ja varamme ovat turvassa jokaisella kirjautumiskerralla.</p>
+
+<h2>Kirjautuminen mobiililaitteella</h2>
+<p>Me voimme kirjautua neonvegas-palveluun helposti myös mobiililaitteilla. Sivusto on optimoitu toimimaan täydellisesti sekä älypuhelimilla että tableteilla, eikä erillistä sovellusta tarvita. Käyttöliittymä mukautuu automaattisesti näytön kokoon, mikä tekee kirjautumisesta nopeaa ja selkeää. Me voimme käyttää samoja pankkitunnuksia ja kirjautumistapaa kuin tietokoneella, joten käyttökokemus pysyy yhtenäisenä. Tämä mahdollistaa pelaamisen missä tahansa ilman rajoituksia.</p>
+
+<h2>Yleisimmät kirjautumisongelmat ja ratkaisut</h2>
+<p>Me voimme joskus kohdata pieniä haasteita kirjautumisen aikana, mutta useimmat niistä on helppo ratkaista. Yleisimpiä ongelmia ovat pankkitunnusten virheellinen syöttö, verkkoyhteyden katkeaminen tai selaimen välimuistiin liittyvät häiriöt. Näissä tilanteissa voimme tarkistaa tietomme, päivittää sivun tai kokeilla toista selainta. Jos ongelma jatkuu, voimme ottaa yhteyttä asiakastukeen, joka auttaa nopeasti tilanteen ratkaisemisessa. Neonvegas casino varmistaa, että apu on aina saatavilla tarvittaessa.</p>
+
+<h2>Nopea pääsy peleihin kirjautumisen jälkeen</h2>
+<p>Me pääsemme kirjautumisen jälkeen välittömästi käsiksi laajaan pelivalikoimaan. Neonvegas tarjoaa tuhansia kolikkopelejä, pöytäpelejä ja live-kasinopelejä, jotka ovat heti käytettävissä ilman lisäasetuksia. Me voimme jatkaa pelejä siitä, mihin jäimme, ja hyödyntää aktiivisia bonuksia suoraan tililtämme. Tämä tekee pelikokemuksesta sujuvan ja keskeytyksettömän, mikä lisää viihdyttävyyttä jokaisella käyttökerralla.</p>
+
+<h2>Kirjautuminen ja maksut</h2>
+<p>Me yhdistämme kirjautumisen ja maksamisen saumattomasti neonvegas-alustalla. Pay’n Play -järjestelmän ansiosta talletukset ja kotiutukset tapahtuvat samalla tunnistautumisella, mikä nopeuttaa koko prosessia. Me voimme siirtää varoja turvallisesti ilman erillisiä vahvistuksia, ja kotiutukset käsitellään usein erittäin nopeasti. Tämä tekee palvelusta erityisen kätevän pelaajille, jotka arvostavat nopeutta ja helppoutta.</p>
+
+<h2>Miksi valita Neonvegas kirjautumiseen</h2>
+<p>Me valitsemme neonvegas-palvelun, koska se tarjoaa yhdistelmän nopeutta, turvallisuutta ja helppokäyttöisyyttä. Kirjautuminen on suunniteltu minimoimaan vaiva ja maksimoimaan käyttömukavuus. Neon vegas casino hyödyntää moderneja ratkaisuja, jotka tekevät pelaamisesta sujuvaa heti ensimmäisestä kirjautumisesta lähtien. Me voimme luottaa siihen, että kaikki toimii odotetusti ja että pääsemme nopeasti nauttimaan peleistä.</p>
+
+<h2>Yhteenveto</h2>
+<p>Me koemme neonvegas kirjautumisen yksinkertaisena, turvallisena ja tehokkaana tapana aloittaa pelaaminen. Prosessi on optimoitu käyttäjäystävälliseksi, ja se toimii saumattomasti kaikilla laitteilla. Neonvegas casino tarjoaa luotettavan ympäristön, jossa voimme keskittyä viihteeseen ilman huolia. Olipa kyseessä ensimmäinen kirjautuminen tai päivittäinen käyttö, palvelu toimii nopeasti ja varmasti. Tämä tekee siitä erinomaisen valinnan kaikille, jotka arvostavat helppoa ja modernia pelikokemusta.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav class="footer-links" aria-label="Alatunnisteen linkit">
+        <a href="../about-us/">Tietoa meistä</a>
+        <a href="../contact-us/">Ota yhteyttä</a>
+        <a href="../bonus-policy/">Bonuskäytäntö</a>
+        <a href="../privacy-policy/">Tietosuojakäytäntö</a>
+        <a href="../terms-and-conditions/">Käyttöehdot</a>
+        <a href="../responsible-gambling/">Vastuullinen pelaaminen</a>
+      </nav>
+      <div class="copyright">2026 Neonvegas Casino. Kaikki oikeudet pidätetään.</div>
+    </div>
+  </footer>
+</body>
+</html>
