@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="fi-FI">
 <head>
@@ -78,6 +79,7 @@
       display: flex;
       align-items: center;
       gap: 22px;
+      flex-wrap: wrap;
       font-family: "Chakra Petch", sans-serif;
       font-weight: 600;
       letter-spacing: 0.2px;
@@ -102,6 +104,9 @@
       border: none;
       cursor: pointer;
       border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       font-family: "Chakra Petch", sans-serif;
       font-weight: 700;
       padding: 10px 16px;
@@ -250,9 +255,12 @@
 
     .seo-content table {
       width: 100%;
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap;
       border-collapse: collapse;
       margin: 12px 0 20px;
-      overflow: hidden;
       border-radius: 10px;
       border: 1px solid var(--line);
     }
@@ -291,6 +299,14 @@
 
     .payment-grid {
       grid-template-columns: repeat(7, minmax(90px, 1fr));
+    }
+
+    .trust-grid {
+      grid-template-columns: repeat(3, minmax(120px, 1fr));
+    }
+
+    .providers-grid {
+      grid-template-columns: repeat(5, minmax(100px, 1fr));
     }
 
     .payment-item,
@@ -402,24 +418,61 @@
         grid-template-columns: repeat(4, minmax(90px, 1fr));
       }
 
+      .providers-grid {
+        grid-template-columns: repeat(4, minmax(90px, 1fr));
+      }
+
       .reviews {
         grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 720px) {
+      main {
+        padding-top: 22px;
+      }
+
+      section {
+        margin-bottom: 30px;
+      }
+
       .header-wrap {
         justify-content: center;
+        gap: 10px;
+      }
+
+      .logo img {
+        width: 150px;
       }
 
       .nav-links {
         width: 100%;
         justify-content: center;
+        gap: 12px;
       }
 
       .auth-buttons {
         width: 100%;
         justify-content: center;
+        gap: 8px;
+      }
+
+      .auth-buttons .btn {
+        flex: 1;
+      }
+
+      .hero {
+        padding: 16px;
+        border-radius: 14px;
+      }
+
+      .hero h1 {
+        margin-bottom: 14px;
+        font-size: clamp(1.6rem, 8vw, 2.1rem);
+      }
+
+      .hero img {
+        border-radius: 10px;
       }
 
       .games-grid {
@@ -427,12 +480,39 @@
       }
 
       .payment-grid {
-        grid-template-columns: repeat(3, minmax(90px, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .trust-grid,
       .providers-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .payment-item,
+      .provider-item,
+      .trust-item {
+        min-height: 62px;
+        padding: 8px;
+      }
+
+      .seo-content {
+        padding: 16px;
+        border-radius: 14px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        width: min(1160px, 94vw);
+      }
+
+      .btn-cta {
+        width: min(100%, 280px);
       }
     }
   </style>
@@ -450,7 +530,7 @@
       </nav>
 
       <div class="auth-buttons">
-         <a class="btn btn-login" href="/login/">Kirjauduy</a>
+        <button class="btn btn-login" type="button">Kirjaudu</button>
         <a class="btn btn-signup" href="/go/">Rekisteröidy</a>
       </div>
     </div>
@@ -714,7 +794,7 @@
     <div class="container">
       <section aria-label="Trust badges">
         <h2>Luotettavuus</h2>
-        <div class="trust-grid" style="grid-template-columns: repeat(3, minmax(120px, 1fr));">
+        <div class="trust-grid">
           <a class="trust-item" href="https://www.dmca.com/" target="_blank" rel="noopener noreferrer">
             <img src="trust bages/dmca.png" alt="DMCA" />
           </a>
@@ -729,7 +809,7 @@
 
       <section aria-label="Pelivalmistajat" style="margin-top: 22px;">
         <h2>Pelintarjoajat</h2>
-        <div class="providers-grid" style="grid-template-columns: repeat(5, minmax(100px, 1fr));">
+        <div class="providers-grid">
           <div class="provider-item"><img src="game providers/betsoft.png" alt="Betsoft" /></div>
           <div class="provider-item"><img src="game providers/bfgames_dark.png" alt="BF Games" /></div>
           <div class="provider-item"><img src="game providers/endorphina_dark.png" alt="Endorphina" /></div>
